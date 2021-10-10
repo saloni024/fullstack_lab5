@@ -9,11 +9,8 @@ const fs = require('fs');
 - Return home.html page to client
 */
 app.use(express.static("public"))
-app.get('/home.html', (req, res) => {
-     res.sendFile(__dirname + "/public/home.html")
-})
 router.get('/home', (req,res) => {
-  res.send('This is home router');
+  res.sendFile(__dirname + "/public/home.html")
 });
 
 /*
